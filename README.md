@@ -56,7 +56,7 @@ The last test checks if the actual elements returned are as expected between 1 a
 
 The Assert.assertArrayEquals(expected array ,actual array) method was used
 
-The expected list is ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "buzz", "11", "Fizz", "13", "14", "FizzBuzz"]. This was entered as a new String array to the method above.
+The expected list is ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]. This was entered as a new String array to the method above. 
 
 The actual array was then the one created by the FizzBuzz metod (calling at the FizzBuzzGenerator class) with startNumber 1 and endNumber 15. As this method created a list, this was converted to an array using .to Array()
    
@@ -90,11 +90,13 @@ i<endNumber.
 
 Running a test again revailed that while the first 2 elements matched, the first one where it differed was element [2] (the 3rd one). While it should have returned "Fizz", the actual value returned was "FizzBuzz". 
 
-This was fixed by the logical operator in the for loop in the Java class FizzBuzz method from || to &. This is an AND operator 
+This was fixed by the logical operator in the for loop in the Java class FizzBuzz method from || to &. This is an AND operator that only returns true if both sides are true. 
 
-&
+& was used instead of && because & evaluates both sides at the same time while && checks the second statement only if teh first is true.  While in this situation this would deliver the same result, it makes more sense to treat the two conditions (divisible by 3 and 5) equally. 
 
+After rerunning the test this time element [4] returned "Buz" instead if the expected "Buzz". This is a simple spelling mistake that was quickly fixed. 
 
+All three tests have passed after this. 
 
 
 
