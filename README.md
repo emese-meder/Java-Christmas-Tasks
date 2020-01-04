@@ -61,13 +61,13 @@ The expected list is ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "
 The actual array was then the one created by the FizzBuzz metod (calling at the FizzBuzzGenerator class) with startNumber 1 and endNumber 15. As this method created a list, this was converted to an array using .to Array()
    
 
-## Next Step: 
+## Testing the Code: 
 
-The next step is then to run the tests and fix the code based on them.
+The next step is then to run the tests and fix the code based on them. Then run the test again and repeat if necessary. 
 
-The first two tests failed at first, meaning that the divisibleBy method was incorrect. 
+The The FourIsDivisibleByTwoTest() failed at first, meaning that the divisibleBy method was incorrect. 
 
-The tests have passed after changing the return statement in the divisbleBy method:
+The test has passed after changing the return statement in the divisbleBy method:
 
    return numerator % Denominator == 2; 
    
@@ -75,11 +75,30 @@ to be:
 
    return numerator % Denominator == 0; 
 
+The ThreeIsNotDivisibleByTwoTest() passed both times. 
+
+The The fizzBuzzFirstFifteenTest() displayed the following msg on the first run:
+java.lang.AssertionError: array lengths differed, expected.length=15 actual.length=14
+
+This was fixed by changing the second parameter in the for loop in the Java class FizzBuzz method to be
+
+i<=endNumber
+
+instead of 
+
+i<endNumber. 
+
+Running a test again revailed that while the first 2 elements matched, the first one where it differed was element [2] (the 3rd one). While it should have returned "Fizz", the actual value returned was "FizzBuzz". 
+
+This was fixed by the logical operator in the for loop in the Java class FizzBuzz method from || to &. This is an AND operator 
+
+&
 
 
-## Rerun Tests
 
-Once the code was fixed, rerun all the tests and repeat the whole process if necessary. 
+
+
+
 
 
 
