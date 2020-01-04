@@ -16,7 +16,7 @@
 
 1. using the divisibleBy method in the code, divisibleBy(4,2) should return true
 2. divisibleBy(3,2) should return false
-3. fizzBuzzGenerator(1,15) should return ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "buzz", "11", "Fizz", "13", "14", "FizzBuzz"] meaning that when 15 is input as the last element in the generator, that should indeed be the last element it considers (and not 14)
+3. fizzBuzzGenerator(1,15) should return the correct elements
 
 ## Tests
 
@@ -53,12 +53,28 @@ The last test checks if the actual elements returned are as expected between 1 a
 * and if the above is correct, 15 returns "FizzBuzz"
 * numbers divisible by 3 and 5 return "Fizz" and "Buzz" repectively
 * and that the other numbers are left the same
-   
 
+The Assert.assertArrayEquals(expected array ,actual array) method was used
+
+The expected list is ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "buzz", "11", "Fizz", "13", "14", "FizzBuzz"]. This was entered as a new String array to the method above.
+
+The actual array was then the one created by the FizzBuzz metod (calling at the FizzBuzzGenerator class) with startNumber 1 and endNumber 15. As this method created a list, this was converted to an array using .to Array()
+   
 
 ## Next Step: 
 
-Fix the code. 
+The next step is then to run the tests and fix the code based on them.
+
+The first two tests failed at first, meaning that the divisibleBy method was incorrect. 
+
+The tests have passed after changing the return statement in the divisbleBy method:
+
+   return numerator % Denominator == 2; 
+   
+to be:
+
+   return numerator % Denominator == 0; 
+
 
 
 ## Rerun Tests
