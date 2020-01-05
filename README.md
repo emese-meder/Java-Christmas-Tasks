@@ -54,13 +54,13 @@ The last test checks if the actual elements returned are as expected between 1 a
 * numbers divisible by 3 and 5 return "Fizz" and "Buzz" repectively
 * and that the other numbers are left the same
 
-The Assert.assertArrayEquals(expected array ,actual array) method was used
+The Assert.assertArrayEquals(expected array, actual array) method was used
 
 The expected list is ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]. This was entered as a new String array to the method above. 
 
-**Note:** the 9th element had a spelling mistake in it and said "buzz" instead of "Buzz" in the task Readme file. I assumed that to be a mistake and fixed it. 
+**Note:** the 9th element of the expected list had a spelling mistake in it and said "buzz" instead of "Buzz" in the task Readme file. I assumed that to be a mistake and fixed it. 
 
-The actual array was then the one created by the FizzBuzz metod (calling at the FizzBuzzGenerator class) with startNumber 1 and endNumber 15. As this method created a list, this was converted to an array using .to Array()
+The actual array was then the one created by the FizzBuzz method (calling at the FizzBuzzGenerator class) with startNumber 1 and endNumber 15. As this method created a list, this was converted to an array using .to Array()
    
 
 ## Testing the Code: 
