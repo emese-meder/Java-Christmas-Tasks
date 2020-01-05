@@ -18,7 +18,7 @@
 2. divisibleBy(3,2) should return false
 3. fizzBuzzGenerator(1,15) should return the correct elements
 
-## Tests
+## The Tests
 
 A Tests class whas created under the src folder (this is the folder that included the main and FizzBuzzGenerator classes as well) ensuring that the methods that needed to be tested could be called within the test class.
 
