@@ -60,18 +60,18 @@ The expected list is ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "
 
 **Note:** the 9th element of the expected list had a spelling mistake in it and said "buzz" instead of "Buzz" in the task Readme file. I assumed that to be a mistake and fixed it. 
 
-The actual array was then the one created by the FizzBuzz method (calling at the FizzBuzzGenerator class) with startNumber 1 and endNumber 15. As this method created a list, this was converted to an array using .to Array()
+The actual array was then the one created by the FizzBuzz method (calling at the FizzBuzzGenerator class) with startNumber 1 and endNumber 15. As this method created a list, this was converted to an array for the test using .to Array()
    
 
 ## Testing the Code: 
 
-The next step is then to run the tests and fix the code based on them. Then run the test again and repeat if necessary. 
+The next step was then to run the tests and fix the code based on them. Then run the test again and repeat if necessary. 
 
 ### 1st Test
 
 The FourIsDivisibleByTwoTest() failed at first, meaning that the divisibleBy method was incorrect. 
 
-The test has passed after changing the return statement in the divisbleBy method:
+The test has passed after changing the return statement in the divisbleBy method from:
 
    return numerator % Denominator == 2; 
    
@@ -81,7 +81,7 @@ to be:
    
 ### 2nd Test   
 
-The ThreeIsNotDivisibleByTwoTest() passed both times the tests were run so far.  
+The ThreeIsNotDivisibleByTwoTest() passed both times the tests were run so far. Note that the fact that it has passed the first time did not mean that the divisibleBy method was correct.   
 
 ### 3rd Test
 
@@ -91,23 +91,23 @@ The The fizzBuzzFirstFifteenTest() displayed the following msg on the first run:
 
 This was fixed by changing the second parameter in the for loop in the Java class FizzBuzz method to be
 
-i<=endNumber
+   i<=endNumber
 
 instead of 
 
-i<endNumber. 
+   i<endNumber. 
 
 ### 3rd Test: second issue
 
-Running a test again revailed that while the first 2 elements matched, the first one where it differed was element [2] (the 3rd one). While it should have returned "Fizz", the actual value returned was "FizzBuzz". 
+Running a test again revailed that while the first 2 elements matched, the first one where it differed was element [2] (ie. the 3rd one). While it should have returned "Fizz", the actual value returned was "FizzBuzz". 
 
 This was fixed by changing the logical operator in the for loop in the Java class FizzBuzz method from || to &. 
 
-**Note:** & is a logical AND operator that only returns true if both sides are true. & was used instead of && because & evaluates both sides at the same time while && checks the second statement only if the first is true.  While in this situation this would deliver the same result, it makes more sense to treat the two conditions (divisible by 3 and 5) equally. 
+**Note:** & is a logical AND operator that only returns true if the conditions on both sides of the operator are true. & was used instead of && because & evaluates both sides at the same time while && checks the second statement only if the first is true.  While in this situation this would deliver the same result, it makes more sense to treat the two conditions (divisible by 3 and 5) equally. 
 
 ### 3rd Test: third issue 
 
-After rerunning the test this time element [4] returned "Buz" instead if the expected "Buzz". This is a simple spelling mistake that was quickly fixed. 
+After rerunning the test this time element [4] returned "Buz" instead if the expected "Buzz". This was a simple spelling mistake that was quickly fixed in the code. 
 
 All three tests have passed after fixing this. 
 
