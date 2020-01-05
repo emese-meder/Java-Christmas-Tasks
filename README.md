@@ -24,7 +24,7 @@ A Tests class whas created under the src folder (this is the folder that include
 
 (Note that for this the divisibleBy method had to be changed to static).
 
-The test class was created to be public. 
+The Tests class was created to be public. 
 
 Within the Tests class, all individual tests were defined to be in the tests category using the @Test notataion (org.junit.Test was imported)
 
